@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "id": "dev.example.noto.hello",
+  "name": "Hello Noto",
+  "version": "0.1.0",
+  "runtime": "trusted-renderer",
+  "activation": {
+    "startup": false,
+    "events": ["editor.ready"],
+    "hotkeys": ["Mod+Shift+H"]
+  },
+  "capabilities": ["editor.read"],
+  "lifecycle": ["activate", "deactivate"],
+  "commands": [
+    { "id": "hello.ping", "title": "Hello: ping the status line" }
+  ],
+  "settings": [
+    { "key": "loud", "title": "Louder notice", "default": false }
+  ],
+  "hotkeys": [
+    { "command": "hello.ping", "keys": "Mod+Shift+H" }
+  ],
+  "editorExtensions": [],
+  "uiExtensions": []
+}
