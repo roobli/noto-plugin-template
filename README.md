@@ -15,7 +15,7 @@ Scaffold for writing a **trusted-renderer** plugin for [Noto](https://github.com
    - registers a host in `src/renderer/plugins/bundled/`
    - adds a one-line description in `PluginCenter`
 
-Full guide: [Noto docs — Writing a plugin](https://github.com/roobli/Noto/blob/main/docs/plugins.md) (also mirrored on the docs site when published).
+Full guide: [Writing a plugin](https://github.com/roobli/Noto/blob/main/docs/plugins.md) in the Noto repository, and [Plugins](https://roobli.github.io/Noto.docs/guide/plugins) on the docs site.
 
 ## Manifest (schema v2)
 
@@ -57,7 +57,7 @@ Undeclared capabilities and undeclared commands/hotkeys are refused by the host.
 | Stage | Status |
 | --- | --- |
 | Bundled in app (`resources/plugins`) | **Current** |
-| User plugins folder + package digest + install UI | Next |
+| User plugins folder + package digest + install UI | [Later](https://roobli.github.io/Noto.docs/direction/roadmap#later), after `0.1.0` and the *Next* horizon |
 | Experimental isolated runtime (separate origin/session/CSP) | Built, not launched |
 
 Until install opens, treat this template as documentation-plus-scaffold for contributors.
