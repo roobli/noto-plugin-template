@@ -57,7 +57,7 @@ Undeclared capabilities and undeclared commands/hotkeys are refused by the host.
 | Stage | Status |
 | --- | --- |
 | Bundled in app (`resources/plugins`) | **Current** |
-| User plugins folder + package digest + install UI | [Later](https://roobli.github.io/Noto.docs/direction/roadmap#later), after `0.1.0` and the *Next* horizon |
+| User plugins folder + package digest + install UI | [Later](https://roobli.github.io/Noto.docs/direction/roadmap#later), after the *Next* horizon |
 | Experimental isolated runtime (separate origin/session/CSP) | Built, not launched |
 
 Until install opens, treat this template as documentation-plus-scaffold for contributors.
