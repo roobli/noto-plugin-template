@@ -15,7 +15,7 @@
     { "id": "hello.ping", "title": "Hello: ping the status line" }
   ],
   "settings": [
-    { "key": "loud", "title": "Louder notice", "default": false }
+    { "key": "loud", "type": "boolean", "default": false }
   ],
   "hotkeys": [
     { "command": "hello.ping", "keys": "Mod+Shift+H" }
