@@ -2,7 +2,7 @@
 
 Scaffold for writing a **trusted-renderer** plugin for [Noto](https://github.com/roobli/Noto).
 
-> **Today:** plugins ship **inside** the Noto application. There is no user plugins folder or third-party install flow yet — a plugin is a pull request against `roobli/Noto`. A sandboxed runtime for untrusted packages exists in tree but is not launched. This template mirrors the shape you will use once install opens, and the shape bundled plugins already use.
+> **Today:** since Noto 0.0.4, Plugin Center installs plugins from a folder, from a GitHub repository or from a marketplace ([`roobli/noto-plugins`](https://github.com/roobli/noto-plugins) by default), and runs them sandboxed in a Web Worker with no page, no app API and no network unless the reader trusts one fully. This template scaffolds the other shape: a bundled trusted-renderer plugin that ships inside the app and is added to `roobli/Noto` by pull request. For a plugin people install themselves, start from the `"runtime": "sandboxed"` manifest and the `reading-time` example in `roobli/noto-plugins`.
 
 ## Quick start
 
@@ -56,11 +56,11 @@ Undeclared capabilities and undeclared commands/hotkeys are refused by the host.
 
 | Stage | Status |
 | --- | --- |
-| Bundled in app (`resources/plugins`) | **Current** |
-| User plugins folder + package digest + install UI | [Later](https://roobli.github.io/Noto.docs/direction/roadmap#later), after the *Next* horizon |
-| Experimental isolated runtime (separate origin/session/CSP) | Built, not launched |
+| Bundled in app (`resources/plugins`), trusted renderer | Shipped; what this template scaffolds |
+| Install from a folder, GitHub or a marketplace, with a pinned digest | Shipped in 0.0.4 |
+| Sandboxed runtime (Web Worker, no page, no app API, no network) | Shipped in 0.0.4; the default for installed plugins |
 
-Until install opens, treat this template as documentation-plus-scaffold for contributors.
+Installed plugins use the `"runtime": "sandboxed"` manifest described in [Writing a plugin](https://github.com/roobli/Noto/blob/main/docs/plugins.md); this template does not yet carry a sandboxed example.
 
 ## License
 
